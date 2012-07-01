@@ -77,7 +77,7 @@ While this practice works up to a degree, performing Service Level Checking dire
 From the providers perspective, due to direct access to all soft- and hardware, no one is better able to monitor the cloud in detail, than the provider himself. Better analysis and understanding of the own cloud in turn allows for better optimizations, thus reduced costs and/or a even more competitive offering in respect to better conditions for the customer and allows the provider to distinguish himself from the competition. Due to increased awareness in the public, especially \textit{energy efficiency} in clouds and thus their energy aware providers are better perceived by the public and so are all of their services.\\
 Finally, seeing as cloud monitoring/SLC is an emerging business, leaving the field to other companies means forfeiting potential revenues.\\
 
-It should also be noted, that it is not enough for a cloud provider to take on the responsibility of performing SLC. Even the most reputable provider will be faced with \textit{issues of trust} when money is involved. Alleviating the need for a third party company that performs service level checking, at the same time raises the requirement for a different trusted third party, to verify the truthfulness of the cloud provider.\\
+It should also be noted, that it is not enough for a cloud provider to take on the responsibility of performing SLC. Even the most reputable provider will be faced with issues of trust when money is involved. Alleviating the need for a third party company that performs SLC, at the same time raises the requirement for a different trusted third party, to verify the truthfulness of the cloud provider.\\
 
 \section{Achieving SLC}
 \label{sec:achieving_slc}
@@ -98,7 +98,7 @@ Although cloud providers tend to introduce their own notion of established high 
 Because no standard for the interpretation of common SLA parameters exists, SLA definitions move away from exact quantification of values and instead attempt to define the user experience in more verbal terms~\cite{Roxburgh11}.
 
 \subsection{Processing Information}
-Subsequently the gathered data has to be processed in some way to provide new insights into the system. The extracted information can be analyzed for short term benefit, such as noticing impending SLA violations. A large host of accumulated data over a period of time can also give statistical information about the system for a long term benefit, e.g. to adjust a time-of-the-day rulebase or to improve an employed algorithm and their parameters.\\
+Subsequently the gathered data has to be processed in some way to provide new insights into the system. The extracted information can be analyzed for short term benefit, such as noticing impending SLA violations. A large host of accumulated data over a period of time can also give statistical information about the system for a long term benefit, e.g. to adjust a time-of-the-day rulebase or to improve an employed algorithm and their parameters.
 
 \subsection{Using Information}
 Ultimately the obtained knowledge can be used to make \textit{beneficial changes} to the own system, make short term decisions in regard to resource allocation and be made available to users as part of the provided service. When provided with detailed usage statistics, customers themselves can draw their own conclusions from their individual usage sand optimize their workflow.
@@ -118,7 +118,7 @@ Due to the different constraints that SLAs entail, as well as the dynamic nature
 	\end{itemize}
 
 \section{SLC Approaches}
-The steps described in section~\ref{sec:achieving_slc} will always be necessary in some way or another. Because of this, the idea for a unified pattern suggests itself. This task is not trivial because of the differences between the proprietary cloud implementations and lack of standards.\\
+The steps described in Sec.~\ref{sec:achieving_slc} will always be necessary in some way or another. Because of this, the idea for a unified pattern suggests itself. This task is not trivial because of the differences between the proprietary cloud implementations and lack of standards.\\
 
 An already well proven approach that seems to fit the task of SLC is the \textit{MAPE loop}.\\
 This part of the paper will give a short introduction into the MAPE loop and further use it to demonstrate the different concepts and methods which can be used to realize SLC, as most proposed approaches can be seen as implementing variants of it to achieve the aforementioned goals and thus can be broken down into their respective MAPE-steps.\\
@@ -137,7 +137,7 @@ Consequently, during the \textit{Monitor} step, the environment (or its relevant
 
 Additions to the original MAPE loop exist: elements of \textit{knowledge management} and \textit{semantic web} development can influence the autonomous behaviour of the system after deployment and during execution in the environment.\\
 Simple MAPE systems without knowledge bases try to use static rules to choose actions from, whereas an enhanced MAPE loop acting upon a knowledge base (MAPE-K) learns from the perceived environment during its lifetime and tries to use this information to deal with new information gathered (see Fig.~\ref{fig:mape})\\
-Furthermore, an adaptation phase can be added to the loop to help do all the steps necessary before the start of an application, e.g. adjust the cloud infrastructure as well as the applications that are to be deployed on it with special regards to fulfill the monitoring requirements (see section~\ref{sec:adaption})\cite{Maurer11}.\\
+Furthermore, an adaptation phase can be added to the loop to help do all the steps necessary before the start of an application, e.g. adjust the cloud infrastructure as well as the applications that are to be deployed on it with special regards to fulfill the monitoring requirements (see Sec.~\ref{sec:adaption})\cite{Maurer11}.\\
 \textit{Case-Based Reasoning} (CBR) can be utilized to improve scheduling algorithms contained in the knowledge base. By using CBR, the MAPE loop helps to avoid future SLA violations by intelligently scheduling applications based on the up to date monitored metric values and comparable situations perceived in the past~\cite{Maurer10}\cite{Maurer11}\\
 Under certain frameworks the analyzing and planning phase are cumulated into one single step  because of their highly linked nature, e.g. all frameworks embedded into the \textit{Foundations of Self-Governing ICT Infrastructure} (FoSII)~\cite{Maurer11}\cite{Emeakaroha10a}\cite{Emeakaroha10b}.
 
