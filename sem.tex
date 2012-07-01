@@ -47,7 +47,7 @@ In Cloud Computing, \textit{Service Level Checking} (SLC) is the verification of
 }
 
 \section{Introduction}
-Cloud computing is a topic of ever-increasing importance. Before clouds, grid computing was the technology of choice. However, as can be seen in '\ref{fig:rise_cloud}, cloud computing has surpassed grid computing in Google trends since 2007, and the upward trend continues~\cite{Alhamad11}.
+Cloud computing is a topic of ever-increasing importance. Before clouds, grid computing was the technology of choice. However, as can be seen in Fig.~\ref{fig:rise_cloud}, cloud computing has surpassed grid computing in Google trends since 2007, and the upward trend seems to continue~\cite{Alhamad11}.
 
 \begin{figure}[Ht]
 	\centering
@@ -125,7 +125,7 @@ This part of the paper will give a short introduction into the MAPE loop and fur
 The focus lies on the described practices. The MAPE loop (being a well known pattern) is used as an abstraction/categorization of the described practices and how they work together structurally.
 
 \subsection{MAPE Loop}
-The MAPE loop is a common abstract approach for controlling a autonomous system acting upon a (complex) environment. It is taken from artificial intelligence processing and it describes a system that only needs sporadic/no user input and otherwise perceives its environment, analyzes its, updates itself and infers actions to take. The MAPE approach is an iterative loop that breaks this (for machine intelligence) complex task down to these abstract consecutive steps: \textit{Monitor, Analyze, Plan and Execute} (see Figure~\ref{fig:mape}).\\
+The MAPE loop is a common abstract approach for controlling a autonomous system acting upon a (complex) environment. It is taken from artificial intelligence processing and it describes a system that only needs sporadic/no user input and otherwise perceives its environment, analyzes its, updates itself and infers actions to take. The MAPE approach is an iterative loop that breaks this (for machine intelligence) complex task down to these abstract consecutive steps: \textit{Monitor, Analyze, Plan and Execute} (see Fig.~\ref{fig:mape}).\\
 Consequently, during the \textit{Monitor} step, the environment (or its relevant abstraction metrics) is perceived, during the \textit{Analyze} step the gathered information is broken down to relevant conclusions that conclude in a plan formed during the respective \textit{Plan} step which is executed (mostly acting on the perceived environment) in the \textit{Execute} step.\\
 
 \begin{figure}[Ht]
@@ -136,7 +136,7 @@ Consequently, during the \textit{Monitor} step, the environment (or its relevant
 \end{figure}
 
 Additions to the original MAPE loop exist: elements of \textit{knowledge management} and \textit{semantic web} development can influence the autonomous behaviour of the system after deployment and during execution in the environment.\\
-Simple MAPE systems without knowledge bases try to use static rules to choose actions from, whereas an enhanced MAPE loop acting upon a knowledge base (MAPE-K) learns from the perceived environment during its lifetime and tries to use this information to deal with new information gathered (see Figure~\ref{fig:mape})\\
+Simple MAPE systems without knowledge bases try to use static rules to choose actions from, whereas an enhanced MAPE loop acting upon a knowledge base (MAPE-K) learns from the perceived environment during its lifetime and tries to use this information to deal with new information gathered (see Fig.~\ref{fig:mape})\\
 Furthermore, an adaptation phase can be added to the loop to help do all the steps necessary before the start of an application, e.g. adjust the cloud infrastructure as well as the applications that are to be deployed on it with special regards to fulfill the monitoring requirements (see section~\ref{sec:adaption})\cite{Maurer11}.\\
 \textit{Case-Based Reasoning} (CBR) can be utilized to improve scheduling algorithms contained in the knowledge base. By using CBR, the MAPE loop helps to avoid future SLA violations by intelligently scheduling applications based on the up to date monitored metric values and comparable situations perceived in the past~\cite{Maurer10}\cite{Maurer11}\\
 Under certain frameworks the analyzing and planning phase are cumulated into one single step  because of their highly linked nature, e.g. all frameworks embedded into the \textit{Foundations of Self-Governing ICT Infrastructure} (FoSII)~\cite{Maurer11}\cite{Emeakaroha10a}\cite{Emeakaroha10b}.
@@ -160,7 +160,7 @@ The adaptation step is invoked whenever a new application enters the cloud manag
 \subsection{Monitor}
 The monitoring component of the loop utilizes the available sensors to keep track of the system’s current status. For this purpose various tools are available, for example ganglia~\cite{Massie04}. To be able to utilize the measured values, the various low level metrics have to be \textit{compiled into high level metrics} that can be compared to service level objectives, or made available to the user~\cite{Maurer11}. This feature is usually not provided by the tools for monitoring low level metrics and hence must be implemented by a higher level framework.\\
 
-Simple high level metrics can be mapped directly to low level metrics. More often, however, it is necessary to aggregate different low level metrics in order to map them to an SLA parameter. One example is \textit{Availability} as high level metric, which can be broken down into uptime and downtime as low level metrics. To correlate the two, a formula as seen in Figure~\ref{fig:lo2hi} can be utilized.\\
+Simple high level metrics can be mapped directly to low level metrics. More often, however, it is necessary to aggregate different low level metrics in order to map them to an SLA parameter. One example is \textit{Availability} as high level metric, which can be broken down into uptime and downtime as low level metrics. To correlate the two, a formula as seen in Fig.~\ref{fig:lo2hi} can be utilized.\\
 
 \begin{figure}[Ht]
 	\centering
@@ -179,7 +179,7 @@ Another way to classify the current system state is to use models. Models are us
 
 Models, like thresholds, can also be adjusted. Application behavior observed over a span of time can be used to adjust the provisioning of resources for an application. Taking this idea further, the time span can be increased to several days/weeks/months. Such data can be gathered on a per-application basis, or inferred from similar applications. Anticipating the resource needs of an application allow the host to allocate the required resources in advance, rather than during load times.\\
 
-Figure~\ref{fig:usage} shows a real life example of load distribution on a cloud during the day as average over one month. The analytical insight gained from this particular statistic would allow the cloud’s host to distribute the VMs in his cloud before 2pm. This would reduce the necessary amount of VM migrations along physical machines.\\
+Fig.~\ref{fig:usage} shows a real life example of load distribution on a cloud during the day as average over one month. The analytical insight gained from this particular statistic would allow the cloud’s host to distribute the VMs in his cloud before 2pm. This would reduce the necessary amount of VM migrations along physical machines.\\
 
 \begin{figure}[Ht]
 	\centering
@@ -246,7 +246,7 @@ Anticipating the need for migration also allows the provider to use more naive m
 
 \subsection{3-Tier Cloud Monitor Architecture}
 This pattern is a proposal for a divide and conquer approach to manage the complexity of monitoring data from the various sources within a cloud. It uses a component based architecture for the implementation of the monitor system using a 3-tier architecture.
-A seen in figure~\ref{fig:3tier_monitor}, the low level core monitor is situated at the lowest data collection point, gathering the available raw system metrics, and aggregates them into low-level indicators. These are sent to the data collector  which aggregates them to high level metrics and passes them on to the service monitor, which aggregates the received data and finally matches it against the service level objectives~\cite{Chazalet10}.\\
+A seen in Fig.~\ref{fig:3tier_monitor}, the low level core monitor is situated at the lowest data collection point, gathering the available raw system metrics, and aggregates them into low-level indicators. These are sent to the data collector  which aggregates them to high level metrics and passes them on to the service monitor, which aggregates the received data and finally matches it against the service level objectives~\cite{Chazalet10}.\\
 
 \begin{figure}[Ht]
 	\centering
